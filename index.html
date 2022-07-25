@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NEOBAKA</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="assets/logo2.png" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header id="header">
+      <nav class="container">
+        <div class="logo" id="logo"></div>
+        <!-- Menu -->
+        <div class="menu">
+          <ul class="grid">
+            <li><a class="title" href="#home">HOME</a></li>
+            <li><a class="title" href="#talentos">TALENTOS</a></li>
+            <li><a class="title" href="#audicoes">AUDIÇÕES</a></li>
+            <li><a class="title" href="#contato">CONTATO</a></li>
+            <li>
+              <a
+                class="title"
+                target="_blank"
+                href="https://neobaka.lojavirtualnuvem.com.br/"
+                >LOJA</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="toggle icon-menu"></div>
+        <div class="toggle icon-close"></div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- HOME -->
+      <section class="section" id="home">
+        <div class="container grid">
+          <div class="banner">
+            <video autoplay muted loop>
+              <source src="assets/NyanCat.mp4" type="video/mp4" />
+            </video>
+          </div>
+        </div>
+      </section>
+
+      <!-- TALENTS -->
+      <section class="section" id="talentos">
+        <div class="container grid">
+          <h2 class="title header">TALENTOS</h2>
+          <div class="subs">
+            <h3 class="title">ALCANCE</h3>
+            <i class="fa-brands fa-twitter" id="twitter"></i>
+            <p>XX</p>
+            <i class="fa-brands fa-twitch" id="twitch"></i>
+            <p>XX</p>
+            <i class="fa-brands fa-instagram" id="instagram"></i>
+            <p>XX</p>
+            <i class="fa-brands fa-youtube" id="youtube"></i>
+            <p>XX</p>
+            <i class="fa-brands fa-tiktok" id="tiktok"></i>
+            <p>XX</p>
+          </div>
+          <!-- CARDS -->
+          <div class="cards grid">
+            <!-- Tozi -->
+            <div class="card" id="T" onclick="openT()"></div>
+            <div class="popup-wrapper-t">
+              <div class="popup">
+                <div class="popup-close" onclick="closeP()">X</div>
+                <div class="popup-content">
+                  <h2>Toshiruz</h2>
+                  <p>
+                    Toshiruz ou Toshi, o jovem Vtuber meio-demônio é um caçador
+                    de "Onis" com poderes místicos, que voltou no tempo para
+                    formar um grupo de jovens com habilidades especiais
+                    (Gourizadda) e assim impedir que algo horrível aconteça.
+                  </p>
+                  <div class="link-wrapper">
+                    <a href="#" target="_blank"
+                      ><i class="fa-brands fa-twitter" id="twitter"></i
+                    ></a>
+                    <a href="#" target="_blank"
+                      ><i class="fa-brands fa-twitch" id="twitch"></i
+                    ></a>
+                    <a href="#" target="_blank"
+                      ><i class="fa-brands fa-youtube" id="youtube"></i
+                    ></a>
+                    <a href="#" target="_blank"
+                      ><i class="fa-brands fa-tiktok" id="tiktok"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Dante -->
+            <div class="card" id="D" onclick="openD()"></div>
+            <div class="popup-wrapper-d">
+              <div class="popup">
+                <div class="popup-close" onclick="closeP()">X</div>
+                <div class="popup-content">
+                  <h2>Dante</h2>
+                  <p>
+                    O íncrivel (e roxo) meio-morcego e meio-aranha! Dante ou
+                    DanteWill, é um ser calmo e pacífico, vive uma vida pacata
+                    morando em um porão de baixo da grande árvore Yggdrasil.
+                    Ainda assim ele sai para viajar por outros planos quando
+                    deseja.
+                  </p>
+                  <div class="link-wrapper">
+                    <a href="#" target="_blank"
+                      ><i class="fa-brands fa-twitter" id="twitter"></i
+                    ></a>
+                    <a href="#" target="_blank"
+                      ><i class="fa-brands fa-twitch" id="twitch"></i
+                    ></a>
+                    <a href="#" target="_blank"
+                      ><i class="fa-brands fa-youtube" id="youtube"></i
+                    ></a>
+                    <a href="#" target="_blank"
+                      ><i class="fa-brands fa-tiktok" id="tiktok"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Eeiris -->
+            <div class="card" id="E" onclick="openE()"></div>
+            <div class="popup-wrapper-e">
+              <div class="popup">
+                <div class="popup-close" onclick="closeP()">
+                  <strong>X</strong>
+                </div>
+                <div class="popup-content">
+                  <h2>Eeiris</h2>
+                  <p>
+                    uma kitsune de orelhas tão grandes quanto seu coração.
+                    Eeiris Zuro é a Vtuber que vôce procura quando o objetivo é
+                    risadas com uma pitadinha de doçura. Mundialmente conhecida
+                    por ter um burrinho, que ela leva pra passear as vezes.
+                  </p>
+                  <div class="link-wrapper">
+                    <a href="#" target="_blank"
+                      ><i class="fa-brands fa-twitter" id="twitter"></i
+                    ></a>
+                    <a href="#" target="_blank"
+                      ><i class="fa-brands fa-twitch" id="twitch"></i
+                    ></a>
+                    <a href="#" target="_blank"
+                      ><i class="fa-brands fa-youtube" id="youtube"></i
+                    ></a>
+                    <a href="#" target="_blank"
+                      ><i class="fa-brands fa-tiktok" id="tiktok"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PARTNERS -->
+      <section class="section" id="partners">
+        <div class="container-line">
+          <div class="scrolling-wrapper">
+            <div class="cards-logo"></div>
+            <div class="cards-logo"></div>
+            <div class="cards-logo"></div>
+            <div class="cards-logo"></div>
+            <div class="cards-logo"></div>
+            <div class="cards-logo"></div>
+            <div class="cards-logo"></div>
+            <div class="cards-logo"></div>
+            <div class="cards-logo"></div>
+            <div class="cards-logo"></div>
+            <div class="cards-logo"></div>
+            <div class="cards-logo"></div>
+            <div class="cards-logo"></div>
+            <div class="cards-logo"></div>
+            <div class="cards-logo"></div>
+            <div class="cards-logo"></div>
+            <div class="cards-logo"></div>
+            <div class="cards-logo"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACTS -->
+      <section class="section" id="contact">
+        <h2 class="title header">FALE CONOSCO</h2>
+        <div class="form">
+          <form method="POST" action="https://formspree.io/f/xlezqggw">
+            <div class="row">
+              <div class="col-25">
+                <label for="fname"></label>
+              </div>
+              <div class="col-75">
+                <input
+                  type="text"
+                  id="fname"
+                  name="firstname"
+                  placeholder="Nome"
+                />
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-25">
+                <label for="mail"></label>
+              </div>
+              <div class="col-75">
+                <input
+                  type="text"
+                  id="mail"
+                  name="email"
+                  placeholder="E-Mail"
+                />
+              </div>
+            </div>
+            <div class="row"></div>
+            <div class="row">
+              <div class="col-25">
+                <label for="subject"></label>
+              </div>
+              <div class="col-75">
+                <textarea
+                  id="subject"
+                  name="subject"
+                  placeholder="Escreva Sua Mensagem"
+                  style="height: 10rem"
+                ></textarea>
+              </div>
+            </div>
+            <div class="row">
+              <input class="button" type="submit" value="Enviar" />
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="section">
+      <div class="container grid">
+        <p>&copy;2022 NEOBAKA</p>
+        <p>Todos os Direitos Reservados.</p>
+      </div>
+    </footer>
+    <script src="main.js"></script>
+    <script src="popup.js"></script>
+  </body>
+</html>
