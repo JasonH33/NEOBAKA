@@ -20,6 +20,7 @@ img {
 
 /*====  VARIABLES ============================ */
 :root {
+  font-display: swap;
   scroll-behavior: smooth;
 
   /* Colors */
