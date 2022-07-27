@@ -59,11 +59,11 @@ body {
 }
 
 .button {
-  background-color: rgb(255, 50, 100);
+  background-color: rgb(250, 100, 150);
   color: var(--text-color-light);
   height: 2.5rem;
-  width: 76rem;
-  margin: 0.75rem 25rem 0.75rem 25rem;
+  width: 75%;
+  margin: 0.75rem 0rem;
   align-items: center;
   padding: 0 2rem;
   border-radius: 0.5rem;
@@ -71,11 +71,10 @@ body {
   border: hidden !important;
   font: 500 1rem var(--body-font);
   transition: background 0.3s;
-  box-shadow: 3px 5px 8px rgba(0, 0, 0, 0.4);
 }
 
 .button:hover {
-  background: rgb(255, 20, 80);
+  background: rgb(255, 50, 100);
 }
 
 /*====  LAYOUT ============================ */
@@ -155,8 +154,7 @@ nav ul li a {
   position: relative;
 }
 
-nav ul li a:hover,
-nav ul li a.active {
+nav ul li a:hover {
   color: rgb(255, 50, 75);
 }
 
@@ -489,6 +487,7 @@ div.subs p {
 
 div.form {
   width: 150vh;
+  margin: 0rem 0rem 0rem 22rem;
 }
 
 /* Style inputs, select elements and textareas */
@@ -496,22 +495,10 @@ input[type='text'],
 textarea {
   width: 100%;
   padding: 0.75rem;
-  border: 2px solid rgb(255, 50, 100);
+  border: 2px solid rgb(255, 255, 255);
   border-radius: 0.25rem;
   box-sizing: border-box;
   resize: vertical;
-}
-
-/* Style the label to display next to the inputs */
-label {
-  display: inline-block;
-}
-
-/* Floating column for labels: 25% width */
-.col-25 {
-  float: left;
-  width: 25%;
-  margin-top: 0.75rem;
 }
 
 /* Floating column for inputs: 75% width */
@@ -539,11 +526,11 @@ footer.section {
 footer p {
   margin: 0rem 2rem 0rem 2rem;
 }
+/*====  MEDIA QUERY ============================ */
 
-/* Wide Desktop */
-@media (min-width: 1920px) {
+@media (min-width: 1900px) {
   .container {
-    max-width: 1920px;
+    max-width: 1900px;
     margin: auto;
   }
 
@@ -583,10 +570,6 @@ footer p {
     font: 900 2rem var(--title-font);
   }
 
-  nav .menu ul li a.title.active {
-    font-weight: bolder;
-  }
-
   nav .icon-menu {
     display: none;
   }
@@ -597,7 +580,7 @@ footer p {
   }
 
   .card {
-    padding: 25rem 5rem;
+    padding: 35vh 20vh;
   }
 
   .cards {
@@ -620,7 +603,17 @@ footer p {
 
   .popup {
     width: 50%;
-    height: 60%;
+    height: auto;
+  }
+
+  .popup-content {
+    font-size: 200%;
+    font-weight: 600;
+  }
+
+  div.form {
+    width: 70%;
+    margin: 0% 0% 0% 25%;
   }
 
   footer .container {
@@ -631,10 +624,112 @@ footer p {
   }
 }
 
-/* Large Desktop */
-@media (min-width: 1440px) and (max-width: 1919px) {
+@media (min-width: 1600px) and (max-width: 1899px) {
   .container {
-    max-width: 1440px;
+    max-width: 1600px;
+  }
+
+  .section .header {
+    max-width: 32rem;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  nav .menu {
+    visibility: visible;
+    opacity: 1;
+    top: 0;
+    margin: 0rem 0rem 0rem 30rem;
+  }
+
+  nav .menu ul {
+    display: flex;
+    gap: 2rem;
+  }
+
+  nav .menu ul li a.title {
+    font: 700 1.75rem var(--body-font);
+  }
+
+  nav .icon-menu {
+    display: none;
+  }
+
+  #home.section {
+    height: 85vh;
+  }
+
+  #talentos.section {
+    height: 75vh;
+  }
+
+  .card {
+    padding: 20vh 15vh;
+  }
+
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .cards-logo {
+    grid-template-columns: 2fr 2fr 2fr;
+  }
+
+  .popup {
+    width: 40%;
+    height: auto;
+  }
+
+  .popup-content {
+    padding: 0.5rem 1.25rem;
+  }
+
+  .popup-content h2 {
+    font-size: 200%;
+  }
+
+  .popup-content p {
+    font-family: var(--body-font);
+    font-size: 220%;
+    font-weight: 600;
+    text-align: justify;
+    margin-top: 1rem;
+  }
+
+  .link-wrapper {
+    margin-top: 2rem;
+  }
+
+  #contact .container {
+    grid-auto-flow: column;
+    align-items: center;
+  }
+
+  div.form {
+    width: 70%;
+    margin: 0% 0% 0% 25%;
+  }
+
+  footer.section {
+    padding: 0.75rem 0rem;
+  }
+
+  footer .container {
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  footer .logo {
+    font-size: 2.5rem;
+  }
+}
+
+@media (min-width: 1400px) and (max-width: 1599px) {
+  .container {
+    max-width: 1400px;
   }
 
   .section .header {
@@ -660,18 +755,16 @@ footer p {
     font: 700 1.25rem var(--body-font);
   }
 
-  nav .menu ul li a.title.active {
-    font-weight: 900;
-  }
-
   nav .icon-menu {
     display: none;
   }
 
-  #home .container {
-    grid-auto-flow: column;
-    justify-content: space-between;
-    margin: 0 auto;
+  #home.section {
+    height: 75vh;
+  }
+
+  .card {
+    padding: 30vh 20vh;
   }
 
   .cards {
@@ -684,7 +777,7 @@ footer p {
 
   .popup {
     width: 45%;
-    height: 65%;
+    height: auto;
   }
 
   .popup-content {
@@ -693,8 +786,8 @@ footer p {
 
   .popup-content p {
     font-family: var(--body-font);
-    font-size: 1.5rem;
-    font-weight: 400;
+    font-size: 200%;
+    font-weight: 500;
     text-align: justify;
     margin-top: 0.75rem;
   }
@@ -709,8 +802,12 @@ footer p {
   }
 
   #contact .button {
-    width: 50rem;
-    margin: 0.75rem 17rem 0.75rem 17rem;
+    width: 75%;
+  }
+
+  div.form {
+    width: 70%;
+    margin: 0% 0% 0% 20%;
   }
 
   footer.section {
@@ -728,225 +825,3 @@ footer p {
     font-size: 2.5rem;
   }
 }
-/* Laptop */
-@media (min-width: 1024px) and (max-width: 1439px) {
-  .container {
-    max-width: 1024px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .section .header {
-    max-width: 32rem;
-    text-align: center;
-    margin-right: auto;
-    margin-left: auto;
-  }
-
-  main {
-    margin-top: var(--header-height);
-  }
-
-  nav.container {
-    margin: 0rem 0rem 0rem 12rem;
-  }
-
-  nav .menu {
-    visibility: visible;
-    opacity: 1;
-    top: 0;
-    margin: 0rem 1rem 0rem 6rem;
-  }
-
-  nav .menu ul {
-    display: flex;
-    gap: 2rem;
-  }
-
-  nav .menu ul li a.title {
-    font: 600 1.15rem var(--title-font);
-  }
-
-  nav .menu ul li a.title.active {
-    font-weight: bolder;
-  }
-
-  nav .icon-menu {
-    display: none;
-  }
-
-  #home .container {
-    grid-auto-flow: column;
-    justify-content: center;
-    margin: 0 auto;
-  }
-
-  #home .image {
-    order: 1;
-  }
-
-  #home .text {
-    order: 0;
-    max-width: 24rem;
-    text-align: left;
-  }
-
-  #about .container {
-    grid-auto-flow: column;
-    margin: 0 auto;
-  }
-
-  .cards {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-
-  .card {
-    padding-left: 3rem;
-    padding-right: 3rem;
-  }
-
-  #testimonials .container {
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  #contact .container {
-    grid-auto-flow: column;
-    align-items: center;
-  }
-
-  #contact .text {
-    max-width: 25rem;
-  }
-
-  footer.section {
-    padding: 0.75rem 0rem;
-  }
-
-  footer .container {
-    display: grid;
-    grid-auto-flow: column;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  footer .logo {
-    font-size: 2.5rem;
-  }
-}
-/* Tablets 
-@media (min-width: 768px) and (max-width: 1023px) {
-  :root {
-    --title-font-size: 2.25rem;
-    --subtitle-font-size: 1.125rem;
-  }
-
-  .container {
-    max-width: 768px;
-  }
-
-  .section {
-    padding: 10rem 0;
-  }
-
-  .section .header {
-    max-width: 32rem;
-    text-align: center;
-    margin-right: auto;
-    margin-left: auto;
-  }
-
-  main {
-    margin-top: var(--header-height);
-  }
-
-  nav .menu {
-    visibility: visible;
-    opacity: 1;
-    top: 0;
-  }
-
-  nav .menu ul {
-    display: flex;
-    gap: 2rem;
-  }
-
-  nav .menu ul li a.title {
-    font: 400 1rem var(--body-font);
-  }
-
-  nav .menu ul li a.title.active {
-    font-weight: bolder;
-  }
-
-  nav .icon-menu {
-    display: none;
-  }
-
-  #home .container {
-    grid-auto-flow: column;
-    justify-content: space-between;
-    margin: 0 auto;
-  }
-
-  #home .image {
-    order: 1;
-  }
-
-  #home .text {
-    order: 0;
-    max-width: 24rem;
-    text-align: left;
-  }
-
-  #about .container {
-    grid-auto-flow: column;
-    margin: 0 auto;
-  }
-
-  .cards {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-
-  .card {
-    padding-left: 3rem;
-    padding-right: 3rem;
-  }
-
-  #testimonials .container {
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  #contact .container {
-    grid-auto-flow: column;
-    align-items: center;
-  }
-
-  #contact .text {
-    max-width: 25rem;
-  }
-
-  .col-25,
-  .col-75,
-  input[type='submit'] {
-    width: 100%;
-    margin-top: 0;
-  }
-
-  footer.section {
-    padding: 3.75rem 0;
-  }
-
-  footer .container {
-    display: grid;
-    grid-auto-flow: column;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  footer .logo {
-    font-size: 2.5rem;
-  }
-}
-*/
