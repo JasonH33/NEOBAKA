@@ -666,7 +666,7 @@ footer p {
   }
 
   nav .menu ul li a.title {
-    font: 900 2rem var(--title-font);
+    font: 900 1.85rem var(--title-font);
   }
 
   nav .icon-menu {
