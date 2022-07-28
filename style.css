@@ -221,11 +221,6 @@ nav.show div.icon-close {
   overflow: hidden;
 }
 
-#home.section {
-  padding: 0rem;
-  height: 70vh;
-}
-
 #home .container {
   justify-content: center;
   margin: 0;
@@ -447,8 +442,7 @@ div.subs p {
 .scrolling-wrapper {
   display: flex;
   flex-wrap: nowrap;
-  overflow: auto;
-  scroll-behavior: auto;
+  overflow-x: scroll;
 }
 
 .scrolling-wrapper::-webkit-scrollbar {
@@ -527,10 +521,115 @@ footer p {
   margin: 0rem 2rem 0rem 2rem;
 }
 /*====  MEDIA QUERY ============================ */
+@media (orientation: portrait) {
+  #home.section {
+    padding: 0%;
+    height: 90vh;
+  }
 
-@media (min-width: 1900px) {
+  #talentos.section {
+    padding: 2% 5% 2% 5%;
+    height: 170vh;
+  }
+
+  .cards {
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+
+  .card {
+    height: auto;
+    width: 80%;
+    margin: 0% 10% 0% 10%;
+  }
+
+  .popup {
+    max-width: 90%;
+    width: auto;
+    height: 80%;
+  }
+
+  .popup-content {
+    padding: 2% 3%;
+  }
+
+  .popup-content h2 {
+    font-size: 650% !important;
+  }
+
+  .popup-content p {
+    font-family: var(--body-font);
+    font-size: 250%;
+    font-weight: 500;
+    text-align: justify;
+    margin-top: 5%;
+  }
+
+  .link-wrapper {
+    margin-top: 5%;
+  }
+
+  .link-wrapper a {
+    padding: 4% 0%;
+    font-size: 150%;
+  }
+}
+
+@media (orientation: landscape) {
+  #home.section {
+    padding: 0%;
+    height: 80vh;
+  }
+
+  #talentos.section {
+    padding: 0% 2% 0% 2%;
+    height: 100vh;
+  }
+
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .card {
+    height: 140%;
+    width: auto;
+    margin: 0% 2% 0% 2%;
+  }
+
+  .popup {
+    max-height: 80%;
+    width: 60%;
+    height: auto;
+  }
+
+  .popup-content {
+    padding: 2% 3%;
+  }
+
+  .popup-content h2 {
+    font-size: 600% !important;
+  }
+
+  .popup-content p {
+    font-family: var(--body-font);
+    font-size: 300%;
+    font-weight: 600;
+    text-align: justify;
+    margin-top: 2.5%;
+  }
+
+  .link-wrapper {
+    margin-top: 5%;
+  }
+
+  .link-wrapper a {
+    padding: 4% 0%;
+    font-size: 150%;
+  }
+}
+
+@media only screen and (min-width: 1900px) {
   .container {
-    max-width: 1900px;
+    max-width: 1890px;
     margin: auto;
   }
 
@@ -574,19 +673,6 @@ footer p {
     display: none;
   }
 
-  #home.section {
-    padding: 0rem;
-    height: 80vh;
-  }
-
-  .card {
-    padding: 35vh 20vh;
-  }
-
-  .cards {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-
   div.subs {
     margin: 0rem 18rem;
     padding: 0.5rem 5rem;
@@ -599,16 +685,6 @@ footer p {
 
   div.subs p {
     font-size: 1.5rem;
-  }
-
-  .popup {
-    width: 50%;
-    height: auto;
-  }
-
-  .popup-content {
-    font-size: 200%;
-    font-weight: 600;
   }
 
   div.form {
@@ -624,13 +700,13 @@ footer p {
   }
 }
 
-@media (min-width: 1600px) and (max-width: 1899px) {
+@media only screen and (min-width: 1600px) and (max-width: 1899px) {
   .container {
-    max-width: 1600px;
+    max-width: 1590px;
   }
 
   .section .header {
-    max-width: 32rem;
+    max-width: 100%;
     text-align: center;
     margin-right: auto;
     margin-left: auto;
@@ -640,7 +716,7 @@ footer p {
     visibility: visible;
     opacity: 1;
     top: 0;
-    margin: 0rem 0rem 0rem 30rem;
+    margin: 0rem 0rem 0rem 30%;
   }
 
   nav .menu ul {
@@ -656,49 +732,8 @@ footer p {
     display: none;
   }
 
-  #home.section {
-    height: 85vh;
-  }
-
-  #talentos.section {
-    height: 75vh;
-  }
-
-  .card {
-    padding: 20vh 15vh;
-  }
-
-  .cards {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-
   .cards-logo {
     grid-template-columns: 2fr 2fr 2fr;
-  }
-
-  .popup {
-    width: 40%;
-    height: auto;
-  }
-
-  .popup-content {
-    padding: 0.5rem 1.25rem;
-  }
-
-  .popup-content h2 {
-    font-size: 200%;
-  }
-
-  .popup-content p {
-    font-family: var(--body-font);
-    font-size: 220%;
-    font-weight: 600;
-    text-align: justify;
-    margin-top: 1rem;
-  }
-
-  .link-wrapper {
-    margin-top: 2rem;
   }
 
   #contact .container {
@@ -727,13 +762,13 @@ footer p {
   }
 }
 
-@media (min-width: 1400px) and (max-width: 1599px) {
+@media only screen and (min-width: 1400px) and (max-width: 1599px) {
   .container {
-    max-width: 1400px;
+    max-width: 1390px;
   }
 
   .section .header {
-    max-width: 32rem;
+    max-width: auto;
     text-align: center;
     margin-right: auto;
     margin-left: auto;
@@ -743,7 +778,7 @@ footer p {
     visibility: visible;
     opacity: 1;
     top: 0;
-    margin: 0rem 4rem 0rem 30rem;
+    margin: 0% 0% 0% 30%;
   }
 
   nav .menu ul {
@@ -752,48 +787,15 @@ footer p {
   }
 
   nav .menu ul li a.title {
-    font: 700 1.25rem var(--body-font);
+    font: 700 1.7rem var(--body-font);
   }
 
   nav .icon-menu {
     display: none;
   }
 
-  #home.section {
-    height: 75vh;
-  }
-
-  .card {
-    padding: 30vh 20vh;
-  }
-
-  .cards {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-
   .cards-logo {
     grid-template-columns: 2fr 2fr 2fr;
-  }
-
-  .popup {
-    width: 45%;
-    height: auto;
-  }
-
-  .popup-content {
-    padding: 0.5rem 1.25rem;
-  }
-
-  .popup-content p {
-    font-family: var(--body-font);
-    font-size: 200%;
-    font-weight: 500;
-    text-align: justify;
-    margin-top: 0.75rem;
-  }
-
-  .link-wrapper {
-    margin-top: 2rem;
   }
 
   #contact .container {
@@ -825,3 +827,153 @@ footer p {
     font-size: 2.5rem;
   }
 }
+
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+  .container {
+    max-width: 1190px;
+    margin-left: 0rem;
+  }
+
+  .section .header {
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  nav .menu {
+    visibility: visible;
+    opacity: 1;
+    top: 0;
+    margin: 0% 2% 0% 16%;
+  }
+
+  nav .menu ul {
+    display: flex;
+    gap: 2rem;
+  }
+
+  nav .menu ul li a.title {
+    font: 700 1.6rem var(--body-font);
+  }
+
+  nav .icon-menu {
+    display: none;
+  }
+
+  div.subs {
+    margin: 0% 12% 0% 12%;
+  }
+
+  .cards-logo {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  #contact .container {
+    grid-auto-flow: column;
+    align-items: center;
+  }
+
+  #contact .button {
+    width: 75%;
+  }
+
+  div.form {
+    width: 75%;
+    margin: 0% 0% 0% 20%;
+  }
+
+  footer.section {
+    padding: 0.75rem 0rem;
+  }
+
+  footer .container {
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  footer .logo {
+    font-size: 2.5rem;
+  }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .container {
+    max-width: 982px;
+    margin-left: 0rem;
+  }
+
+  .section .header {
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  nav .menu {
+    visibility: visible;
+    opacity: 1;
+    top: 0;
+    margin: 0%;
+  }
+
+  nav .menu ul {
+    display: flex;
+    gap: 2rem;
+  }
+
+  nav .menu ul li a.title {
+    font: 700 1.5rem var(--body-font);
+  }
+
+  nav .icon-menu {
+    display: none;
+  }
+
+  div.subs {
+    margin: 0% 10% 0% 10%;
+  }
+
+  .cards-logo {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  #contact .container {
+    grid-auto-flow: column;
+    align-items: center;
+  }
+
+  #contact .button {
+    width: 75%;
+  }
+
+  div.form {
+    width: 75%;
+    margin: 0% 0% 0% 20%;
+  }
+
+  footer.section {
+    padding: 0.5rem 0rem;
+  }
+
+  footer .container {
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  footer .logo {
+    font-size: 2rem;
+  }
+}
+/*
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+}
+
+@media only screen and (min-width: 600px) {
+}
+
+@media only screen and (max-width: 600px) {
+}
+*/
