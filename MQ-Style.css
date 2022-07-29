@@ -267,7 +267,7 @@ nav.show div.fa-bars {
 }
 
 #talentos.section {
-  height: 100vh;
+  height: 200vh;
   padding: 0rem 2.5rem 0rem 2.5rem;
 }
 
@@ -306,4 +306,126 @@ div.subs p {
   font-size: 0.75rem;
   color: var(--text-color);
   margin: 0.25rem 0rem;
+}
+
+/* CARDS */
+.cards.grid {
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.card {
+  border: solid #fff;
+  border-width: 0.25rem 0.5rem 0.5rem 0.25rem;
+  border-radius: 0.5rem;
+  height: 50vh;
+  width: auto;
+}
+
+.card#T {
+  display: block;
+  background-image: url(assets/arte_grupo_copy.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.card#D {
+  display: block;
+  background-image: url(assets/arte_grupo_copy2.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.card#E {
+  display: block;
+  background-image: url(assets/arte_grupo_copy3.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.card#T:hover,
+.card#D:hover,
+.card#E:hover {
+  transform: translate(0.25rem, 0.25rem);
+  border-width: 0.5rem 0.5rem 0.5rem 0.5rem;
+  cursor: pointer;
+}
+
+/* POP-UP */
+.popup-wrapper-t,
+.popup-wrapper-d,
+.popup-wrapper-e {
+  display: none;
+  background: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+}
+
+.popup {
+  border: 1rem solid #fff;
+  border-radius: 1rem;
+  background: url(assets/BACKGROUND_1.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: var(--body-font);
+  text-align: center;
+  width: 40%;
+  margin: 10% auto;
+  padding: 1.5rem;
+  position: relative;
+}
+
+.popup a {
+  width: 25%;
+  color: #fff;
+  cursor: pointer;
+  padding: 0.5rem 0.75rem;
+  text-decoration: none;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.popup-content {
+  width: 100%;
+  height: 100%;
+  padding: 1rem 3rem;
+  color: #fff;
+}
+
+.popup-content p {
+  font-family: var(--body-font);
+  font-size: 2rem;
+  font-weight: 500;
+  text-align: justify;
+  margin-top: 1.5rem;
+}
+
+.link-wrapper {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  margin-top: 5rem;
+  font-size: 2rem;
+  border-radius: 0.75rem;
+}
+
+.popup-close {
+  position: absolute;
+  top: -1px;
+  right: -2px;
+  cursor: pointer;
+  padding: 0.75rem 0.75rem;
+  font-weight: 900;
+  color: #000;
+  background: #fff;
+  border-bottom-left-radius: 0.5rem;
 }
