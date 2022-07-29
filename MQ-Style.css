@@ -233,7 +233,7 @@ nav.show div.fa-bars {
 #home .container {
   justify-content: center;
   margin: 0rem;
-  height: 45vh;
+  height: 100vh;
 }
 
 #home .banner {
@@ -249,6 +249,6 @@ nav.show div.fa-bars {
   left: 0;
   -o-object-fit: cover;
   object-fit: cover;
-  width: 55vw;
-  height: 54vh;
+  width: 100vw;
+  height: 100vh;
 }
