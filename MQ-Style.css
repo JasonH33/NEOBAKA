@@ -141,7 +141,7 @@ body {
 
 ::-webkit-scrollbar-thumb {
   background: rgba(0, 0, 0, 0.4);
-  border-radius: 20rem;
+  border-radius: 2rem;
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -436,6 +436,10 @@ div.subs p {
   border-bottom-left-radius: 0.5rem;
 }
 
+.popup-close:hover {
+  color: var(--hover-color);
+}
+
 /*====  PARTNERS   ============================ */
 #partners.section {
   overflow: auto;
@@ -547,11 +551,11 @@ footer p {
   font-size: 0.75rem;
 }
 
-/*====  MEDIA QUERY ============================ 
+/*====  MEDIA QUERY ============================*/
 @media (orientation: landscape) {
   #home.section {
     padding: 0%;
-    height: 80vh;
+    height: 90vh;
   }
 
   #talentos.section {
@@ -559,36 +563,62 @@ footer p {
     height: 100vh;
   }
 
+  #talentos h2 {
+    width: 100vw;
+  }
+
+  #talentos h3 {
+    margin: 2% 5% 2% 5%;
+  }
+
+  div.subs-container {
+    margin: 0% 25% 0% 25%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+  }
+
+  div.subs {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    margin: 0% 5% 0% 5%;
+  }
+
   .cards {
     grid-template-columns: 1fr 1fr 1fr;
+    width: 80vw;
+    margin: 0% 10% 0% 10%;
   }
 
   .card {
-    height: 140%;
-    width: auto;
+    width: 25vw;
+    height: 60vh;
     margin: 0% 2% 0% 2%;
   }
 
   .popup {
-    max-height: 80%;
-    width: 60%;
-    height: auto;
+    max-width: 50%;
+    width: auto;
+    height: 60%;
+    margin: 5% auto;
   }
 
   .popup-content {
-    padding: 2% 3%;
+    padding: 2% 4%;
   }
 
   .popup-content h2 {
-    font-size: 600% !important;
+    font-size: 250% !important;
   }
 
   .popup-content p {
     font-family: var(--body-font);
-    font-size: 300%;
-    font-weight: 600;
+    font-size: 150%;
+    font-weight: 400;
     text-align: justify;
-    margin-top: 2.5%;
+    margin-top: 2%;
   }
 
   .link-wrapper {
@@ -596,8 +626,7 @@ footer p {
   }
 
   .link-wrapper a {
-    padding: 4% 0%;
-    font-size: 150%;
+    padding: 2% 0%;
+    font-size: 100%;
   }
 }
-*/
