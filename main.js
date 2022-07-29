@@ -64,3 +64,11 @@ function closeP() {
   dante.style.display = 'none'
   eeiris.style.display = 'none'
 }
+
+//Horizontal Scroll
+const scrollContainer = document.querySelector('.scrolling-wrapper')
+
+scrollContainer.addEventListener('wheel', evt => {
+  evt.preventDefault()
+  scrollContainer.scrollLeft += evt.deltaY
+})

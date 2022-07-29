@@ -67,7 +67,7 @@ body {
 }
 
 .container-line {
-  margin: 1rem;
+  margin: 0rem;
 }
 
 .grid {
@@ -434,4 +434,116 @@ div.subs p {
   color: #000;
   background: #fff;
   border-bottom-left-radius: 0.5rem;
+}
+
+/*====  PARTNERS   ============================ */
+#partners.section {
+  overflow: auto;
+  white-space: nowrap;
+  padding: 0rem;
+  background: rgb(235, 235, 235);
+}
+
+.scrolling-wrapper {
+  overflow: auto;
+  white-space: nowrap;
+}
+
+.scrolling-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.cards-logo {
+  overflow: auto;
+  white-space: nowrap;
+  display: inline-block;
+  background-image: url(assets/logo2.png);
+  background-color: rgb(235, 235, 235);
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding: 2rem 3rem;
+  margin: 0.5rem 1.5rem;
+}
+
+/*====  CONTACTS ============================ */
+#contact {
+  background: url(assets/BACKGROUND_1.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+
+#contact.section {
+  padding: 1.5rem;
+}
+
+#contact .grid {
+  gap: 2.5rem;
+}
+
+div.form {
+  width: 90vh;
+  margin: 0rem 1rem 0rem 1rem;
+}
+
+.button {
+  background-color: var(--hover-color-alt);
+  color: var(--text-color-light);
+  height: 1.5rem;
+  width: 75%;
+  margin: 0.75rem 0rem;
+  align-items: center;
+  padding: 0rem 1.25rem;
+  border-radius: 0.5rem;
+  border-style: outset;
+  border: hidden !important;
+  font: 500 0.875rem var(--body-font);
+  transition: background 0.3s;
+}
+
+.button:hover {
+  background: var(--hover-color);
+}
+
+/* Style inputs, select elements and textareas */
+input[type='text'],
+textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 0.25rem;
+  box-sizing: border-box;
+  resize: vertical;
+}
+
+/* Floating column for inputs: 75% width */
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 0.75rem;
+}
+
+.row:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+/*====  FOOTER ============================ */
+footer {
+  background: var(--body-color);
+}
+
+footer.section {
+  padding: 0.5rem 0rem;
+}
+
+footer .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+footer p {
+  font-size: 0.75rem;
+  margin: 0rem 2rem 0rem 2rem;
 }
