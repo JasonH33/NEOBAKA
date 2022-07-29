@@ -63,7 +63,8 @@ body {
 
 /*====  LAYOUT ============================ */
 .container {
-  margin: 0%;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
 }
 
 .container-line {
@@ -208,10 +209,10 @@ nav.show ul.grid {
   cursor: pointer;
 }
 
-nav .fa-bars {
-  right: -10rem;
-  top: 0rem;
-  transition: 0.3s;
+i.fa-xmark {
+  display: flex;
+  width: 90vw;
+  justify-content: flex-end;
 }
 
 nav.show div.fa-bars {
