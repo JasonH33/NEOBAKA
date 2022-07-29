@@ -57,7 +57,6 @@ body {
     -1px -1px #000, 1px -1px #000, -1px 1px #000; */
   -webkit-font-smoothing: auto;
 }
-
 .button {
   background-color: rgb(250, 100, 150);
   color: var(--text-color-light);

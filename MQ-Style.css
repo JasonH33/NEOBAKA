@@ -1,0 +1,254 @@
+/*====  RESET ============================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+/*====  VARIABLES ============================ */
+:root {
+  font-display: swap;
+  scroll-behavior: smooth;
+
+  /* Colors */
+  --body-color: rgb(0, 0, 0);
+  --title-color: rgb(220, 220, 220);
+  --text-color: rgb(240, 240, 240);
+  --hover-color: rgb(255, 50, 75);
+  --hover-color-alt: rgb(255, 50, 100);
+
+  /* Fonts */
+  --title-font-size: 1.875rem;
+  --subtitle-font-size: 1rem;
+
+  --title-font: 'Poppins', sans-serif;
+  --body-font: 'DM Sans', sans-serif;
+}
+
+/*====  BASE ============================ */
+body {
+  font: 400 1rem var(--body-font);
+  color: var(--text-color);
+  background: var(--body-color);
+  -webkit-font-smoothing: antialiased;
+}
+
+.title {
+  font: 800 var(--title-font-size) var(--title-font);
+  color: var(--title-color);
+  -webkit-font-smoothing: auto;
+}
+/*
+.logo {
+  width: 6rem;
+  margin: 1rem 0rem 1rem 0rem;
+  padding: 2rem 0rem;
+  background: url(assets/logo1.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}*/
+
+/*====  LAYOUT ============================ */
+.container {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+.container-line {
+  margin: 1rem;
+}
+
+.grid {
+  display: grid;
+  gap: 2rem;
+}
+
+.section {
+  padding: 2.5rem;
+}
+
+.section .title {
+  margin-bottom: 1rem;
+}
+
+.section .subtitle {
+  font-size: var(--subtitle-font-size);
+}
+
+.section header {
+  margin-bottom: 4rem;
+}
+
+#header {
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  display: flex;
+  background: rgba(255, 255, 255, 0);
+  transition: background 0.5s ease;
+  width: 100%;
+}
+
+/*====== SOCIALS ================*/
+#twitter,
+#twitch,
+#instagram,
+#youtube,
+#tiktok {
+  color: #fff;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+#twitter:hover {
+  color: #00acee;
+}
+
+#twitch:hover {
+  color: #6441a5;
+}
+
+#instagram:hover {
+  color: #c13584;
+}
+
+#youtube:hover {
+  color: #ff0000;
+}
+
+#tiktok:hover {
+  color: #000000;
+}
+
+/*====== SCROLL ================*/
+::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 20rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+/*====  NAVIGATION ============================ */
+nav {
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 45vw;
+}
+
+nav ul li {
+  text-align: center;
+}
+
+nav ul li a {
+  transition: color 0.3s;
+  position: relative;
+}
+
+nav ul li a:hover {
+  color: var(--hover-color);
+}
+
+nav .menu {
+  opacity: 0;
+  visibility: hidden;
+  top: -20rem;
+  transition: 0.3s;
+}
+
+nav .menu ul {
+  display: none;
+}
+
+/*====  VISIBLE MENU ============================*/
+nav.show .menu {
+  opacity: 1;
+  visibility: visible;
+  background: var(--body-color);
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: grid;
+  place-content: center;
+}
+
+nav.show .menu ul {
+  display: grid;
+}
+
+nav.show ul.grid {
+  gap: 4rem;
+}
+
+.toggle {
+  color: var(--hover-color-alt);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+nav .fa-bars {
+  right: -10rem;
+  top: 0rem;
+  transition: 0.3s;
+}
+
+nav.show div.fa-bars {
+  visibility: visible;
+  opacity: 1;
+  top: 1.5rem;
+}
+
+/*====  HOME ============================ */
+#home {
+  padding: 0rem;
+  background: url(assets/BACKGROUND_1.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+
+#home .container {
+  justify-content: center;
+  margin: 0rem;
+  height: 45vh;
+}
+
+#home .banner {
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -o-object-fit: cover;
+  object-fit: cover;
+  width: 55vw;
+  height: 54vh;
+}
