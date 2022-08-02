@@ -153,7 +153,7 @@ nav {
   height: 5rem;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   width: 100vw;
 }
 
@@ -213,12 +213,6 @@ i.fa-xmark {
   display: flex;
   width: 60vw;
   justify-content: flex-end;
-}
-
-nav.show div.fa-bars {
-  visibility: visible;
-  opacity: 1;
-  top: 1.5rem;
 }
 
 /*====  HOME ============================ */
@@ -415,13 +409,22 @@ div.subs p {
   background: rgba(0, 0, 0, 0.6);
 }
 
+.popup a:nth-child(1) {
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+}
+
+.popup a:nth-child(4) {
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+
 .link-wrapper {
   display: flex;
   flex-direction: row;
   text-align: center;
   margin-top: 1.25rem;
   font-size: 1.5rem;
-  border-radius: 20rem;
 }
 
 .popup-close {
@@ -491,8 +494,8 @@ div.form {
 }
 
 .button {
-  background-color: var(--hover-color-alt);
-  color: var(--text-color-light);
+  background-color: var(--title-color);
+  color: rgb(100, 100, 100);
   height: 1.5rem;
   width: 80%;
   margin: 0.75rem 0rem;
@@ -506,7 +509,7 @@ div.form {
 }
 
 .button:hover {
-  background: var(--hover-color);
+  background: rgb(200, 200, 200);
 }
 
 /* Style inputs, select elements and textareas */
@@ -553,6 +556,31 @@ footer p {
 
 /*====  MEDIA QUERY ============================*/
 @media (orientation: landscape) {
+  nav {
+    height: 8rem;
+  }
+
+  nav .menu {
+    text-align: center;
+    visibility: visible;
+    opacity: 1;
+    top: 0;
+  }
+
+  nav .menu ul {
+    display: flex;
+    gap: 2rem;
+  }
+
+  nav .menu ul li a.title {
+    font: 700 1.25rem var(--body-font);
+  }
+
+  i.fa-bars,
+  i.fa-xmark {
+    display: none;
+  }
+
   #home.section {
     padding: 0%;
     height: 90vh;
@@ -628,5 +656,340 @@ footer p {
   .link-wrapper a {
     padding: 2% 0%;
     font-size: 100%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #talentos.section {
+    height: 190vh;
+  }
+}
+
+@media only screen and (max-height: 650px) and (min-height: 600px) {
+  #talentos.section {
+    height: 200vh;
+  }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 767px) {
+  #home.section {
+    height: 85vh;
+  }
+
+  #talentos.section {
+    height: 185vh;
+  }
+
+  #talentos h2 {
+    width: 85vw;
+  }
+
+  .logo {
+    width: 12rem;
+    padding: 4rem;
+  }
+
+  nav {
+    height: 8rem;
+  }
+
+  div.subs-container {
+    margin: 0% 2.5% 0% 2.5%;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  #home.section {
+    height: 85vh;
+  }
+
+  #talentos.section {
+    height: 185vh;
+  }
+
+  nav {
+    height: 8rem;
+  }
+
+  nav .menu {
+    text-align: center;
+    visibility: visible;
+    opacity: 1;
+    top: 0;
+  }
+
+  nav .menu ul {
+    display: flex;
+    gap: 1.25rem;
+  }
+
+  nav .menu ul li a.title {
+    font: 700 1.25rem var(--body-font);
+  }
+
+  i.fa-bars,
+  i.fa-xmark {
+    display: none;
+  }
+
+  .logo {
+    width: 12rem;
+    padding: 4rem;
+  }
+
+  #talentos h2 {
+    width: 90vw;
+    font-size: 2rem;
+  }
+
+  #talentos h3 {
+    font-size: 1.75rem;
+  }
+
+  div.subs-container {
+    margin: 0% 5% 0% 5%;
+  }
+
+  div.subs i {
+    font-size: 1.5rem;
+  }
+
+  div.subs p {
+    font-size: 1rem;
+  }
+
+  .popup {
+    max-height: 60%;
+    width: 60%;
+    height: auto;
+    margin: 40% auto;
+  }
+
+  #talentos .popup-content h2 {
+    font-size: 300%;
+  }
+
+  .popup-content p {
+    font-size: 150%;
+    font-weight: 500;
+    margin: 8% 0%;
+  }
+
+  .link-wrapper {
+    margin-top: 15%;
+    font-size: 200%;
+  }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  #home.section {
+    height: 80vh;
+  }
+
+  #talentos.section {
+    height: 85vh;
+  }
+
+  .logo {
+    width: 10rem;
+    padding: 4rem;
+  }
+
+  .popup {
+    max-height: 60%;
+    width: 60%;
+    height: auto;
+    margin: 10% auto;
+  }
+
+  #talentos .popup-content h2 {
+    font-size: 300%;
+  }
+
+  .popup-content p {
+    font-size: 150%;
+    font-weight: 500;
+    margin: 3% 0%;
+  }
+
+  .link-wrapper {
+    font-size: 200%;
+  }
+
+  .card {
+    width: 25vw;
+    height: 50vh;
+  }
+
+  .cards {
+    width: 85vw;
+    margin: 0% 5% 0% 5%;
+  }
+
+  div.form {
+    width: 60%;
+    margin: 0% 25% 0% 25%;
+  }
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1599px) {
+  #home.section {
+    height: 80vh;
+  }
+
+  #talentos.section {
+    height: 100vh;
+  }
+
+  div.subs i {
+    font-size: 1.5rem;
+  }
+
+  .logo {
+    width: 12rem;
+    padding: 4rem;
+  }
+
+  .popup {
+    max-height: 60%;
+    width: 60%;
+    height: auto;
+    margin: 10% auto;
+  }
+
+  #talentos .popup-content h2 {
+    font-size: 300%;
+  }
+
+  .popup-content p {
+    font-size: 150%;
+    font-weight: 500;
+    margin: 3% 0%;
+  }
+
+  .link-wrapper {
+    font-size: 200%;
+  }
+
+  .cards {
+    width: 85vw;
+    margin: 0% 5% 0% 5%;
+  }
+
+  div.form {
+    width: 50%;
+    margin: 0% 30% 0% 30%;
+  }
+}
+
+@media only screen and (min-width: 1600px) and (max-width: 1899px) {
+  #home.section {
+    height: 85vh;
+  }
+
+  #talentos.section {
+    height: 90vh;
+  }
+
+  div.subs i {
+    font-size: 1.5rem;
+  }
+
+  .logo {
+    width: 12rem;
+    padding: 4rem;
+  }
+
+  .popup {
+    max-height: 60%;
+    width: 20%;
+    height: auto;
+    margin: 10% auto;
+  }
+
+  #talentos .popup-content h2 {
+    font-size: 300%;
+  }
+
+  .popup-content p {
+    font-size: 150%;
+    font-weight: 500;
+    margin: 3% 0%;
+  }
+
+  .link-wrapper {
+    font-size: 200%;
+  }
+
+  .cards {
+    width: 85vw;
+    margin: 0% 5% 0% 5%;
+  }
+
+  div.form {
+    width: 50%;
+    margin: 0% 30% 0% 30%;
+  }
+}
+
+@media only screen and (min-width: 1900px) {
+  #home.section {
+    height: 85vh;
+  }
+
+  #talentos.section {
+    height: 75vh;
+  }
+
+  div.subs i {
+    font-size: 1.5rem;
+  }
+
+  .logo {
+    width: 12rem;
+    padding: 4rem;
+    margin: 1.5rem 0rem 0rem 3rem;
+  }
+
+  .cards {
+    width: 85vw;
+    margin: 0% 5% 0% 5%;
+  }
+
+  .card {
+    width: 25vw;
+    height: 50vh;
+    margin: 0% 2% 0% 2%;
+  }
+
+  .popup {
+    max-height: 60%;
+    width: 20%;
+    height: auto;
+    margin: 10% auto;
+  }
+
+  #talentos .popup-content h2 {
+    font-size: 300%;
+  }
+
+  .popup-content p {
+    font-size: 150%;
+    font-weight: 500;
+    margin: 3% 0%;
+  }
+
+  .popup-close {
+    top: -2px;
+    right: -2px;
+  }
+
+  .link-wrapper {
+    font-size: 200%;
+  }
+
+  div.form {
+    width: 50%;
+    margin: 0% 30% 0% 30%;
   }
 }
